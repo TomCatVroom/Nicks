@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://1kmmr4f7xpm2"]
+
+[ext_resource type="PackedScene" uid="uid://dkn71g250tvmu" path="res://character_body_2d.tscn" id="1_7adfw"]
+[ext_resource type="PackedScene" uid="uid://bcmbyudf65c10" path="res://mob.tscn" id="2_4aphc"]
+[ext_resource type="PackedScene" uid="uid://vlp3t7ssavgq" path="res://pine_tree.tscn" id="2_7adfw"]
+[ext_resource type="PackedScene" uid="uid://blbhmv3bvy3rf" path="res://gun.tscn" id="2_o7l3j"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(3, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -5.0
+offset_top = -7.0
+offset_right = 1927.0
+offset_bottom = 1084.0
+
+[node name="Player" parent="." instance=ExtResource("1_7adfw")]
+position = Vector2(903, 688)
+
+[node name="Gun" parent="Player" instance=ExtResource("2_o7l3j")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Mob" parent="." instance=ExtResource("2_4aphc")]
+position = Vector2(458, 297)
+
+[node name="Mob2" parent="." instance=ExtResource("2_4aphc")]
+position = Vector2(609, 421)
+
+[node name="Mob3" parent="." instance=ExtResource("2_4aphc")]
+position = Vector2(441, 578)
+
+[node name="Mob4" parent="." instance=ExtResource("2_4aphc")]
+position = Vector2(972, 206)
+
+[node name="PineTree" parent="." instance=ExtResource("2_7adfw")]
+position = Vector2(253, 682)
+
+[node name="PineTree2" parent="." instance=ExtResource("2_7adfw")]
+position = Vector2(593, 667)
+
+[node name="PineTree3" parent="." instance=ExtResource("2_7adfw")]
+position = Vector2(321, 421)
+
+[node name="PineTree4" parent="." instance=ExtResource("2_7adfw")]
+position = Vector2(952, 442)
+
+[node name="PineTree5" parent="." instance=ExtResource("2_7adfw")]
+position = Vector2(1184, 749)
+
+[node name="PineTree6" parent="." instance=ExtResource("2_7adfw")]
+position = Vector2(1490, 186)
+
+[node name="PineTree7" parent="." instance=ExtResource("2_7adfw")]
+position = Vector2(742, 244)
